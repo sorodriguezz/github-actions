@@ -38,3 +38,4 @@ jobs:
         run: |
           echo "Evento: ${{ toJSON(github.event) }}"
           echo "github_actor:  $GITHUB_ACTOR"
+          echo "github_repository: ${{ github.repository }}"
