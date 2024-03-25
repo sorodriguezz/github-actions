@@ -42,7 +42,7 @@ jobs:
       - name: "Mostrar secrets"
         if: ${{ env.username == 'sorodriguezz' && env.password == '1234' }}
         run: |
-          echo 'si corresponde al usuario'
+          echo 'si corresponde al usuario ${{ env.username }}'
       - name: "Mostrando variables por defecto"
         run: |
           echo "Evento: ${{ toJSON(github.event) }}"
