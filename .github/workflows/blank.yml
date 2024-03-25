@@ -17,6 +17,10 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      platform: aws
+      region: us-east-1
+      account: 12345
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -24,3 +28,8 @@ jobs:
     steps:
       - name: "Mostrar mensaje"
         run: "echo Hola Mundo"
+      - name: "Mostrando variables de entorno"
+        run: |
+          echo "Valor de platform: ${{ env.platform }}"
+          echo "Valor de region: ${{ env.region }}"
+          echo "Valor de account: ${{ env.account }}"
