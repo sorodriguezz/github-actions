@@ -39,6 +39,9 @@ jobs:
           echo "Valor de account: ${{ env.account }}"
           echo "Valor de account: ${{ env.username }}"
           echo "Valor de account: ${{ env.password }}"
+      - name: "Mostrando variables"
+        run: |
+          echo "La version es ${{ vars.PROJECT_VERSION }}"
       - name: "Mostrar secrets"
         if: ${{ env.username == 'sorodriguezz' && env.password == '1234' }}
         run: |
